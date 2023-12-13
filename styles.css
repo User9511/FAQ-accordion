@@ -64,6 +64,7 @@ li img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  text-align: left;
   border: 0;
   background-color: transparent;
   color: var(--Dark-purple);
@@ -78,6 +79,7 @@ li img {
 
 button[aria-expanded="true"] + .faq-answer {
   transition: all 0.3s linear;
+  margin-bottom: 1rem;
 }
 
 .faq {
@@ -113,5 +115,9 @@ p {
 @media screen and (max-width: 768px) {
   body {
     background-image: url(./assets/images/background-pattern-mobile.svg);
+  }
+
+  .container {
+    width: auto;
   }
 }
