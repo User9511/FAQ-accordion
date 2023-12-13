@@ -42,7 +42,7 @@ main {
   border-radius: 1rem;
 }
 
-header {
+.logo-container {
   display: flex;
   gap: 1rem;
   margin-bottom: 2rem;
@@ -77,9 +77,6 @@ li img {
 }
 
 button[aria-expanded="true"] + .faq-answer {
-  max-height: 9em;
-  opacity: 1;
-  margin-bottom: 1rem;
   transition: all 0.3s linear;
 }
 
@@ -90,9 +87,17 @@ button[aria-expanded="true"] + .faq-answer {
 }
 
 .faq-answer {
-  opacity: 0;
-  max-height: 0;
+  display: grid;
+  grid-template-rows: 0fr;
   transition: all 0.3s linear;
+}
+
+.faq-answer[aria-hidden="false"] {
+  grid-template-rows: 1fr;
+}
+
+.faq-answer > span {
+  overflow: hidden;
 }
 
 p {
